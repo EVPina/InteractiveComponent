@@ -28,9 +28,9 @@ body{
 }
 
 .container{
-    width: 355px;
+    width: 340px;
     height: 340px;
-    position: relative;
+    /* position: relative; */
 }
 .container-inner{
     position: relative;
@@ -68,7 +68,7 @@ body{
     padding: 1rem;
 }
 
-.container-front-text h1
+.container-front-text h2,.container-back-text h2
 {
     font-size: 1.8rem;
     font-weight: 700;
@@ -76,6 +76,7 @@ body{
 }
 
 .container-front-text p,
+.container-back-text p,
 .container-front-options-option
 {
     font-weight: 400;
@@ -125,4 +126,20 @@ body{
 .selected{
     background-color: hsl(217, 12%, 63%);
     color: hsl(0, 0%, 100%);
+}
+
+.container-back
+{
+    text-align: center;
+}
+
+.container-back-content{
+    margin: 2.5rem 0;
+}
+
+.container-back-content-result{
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(213, 19%, 18%);
+    padding: 10px 20px;
+    border-radius: 20px;
 }

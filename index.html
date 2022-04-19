@@ -33,7 +33,7 @@
             <img src="images/icon-star.svg" alt="start" />
           </div>
           <div class="container-front-text">
-            <h1 class="container-front-text-title">How did we do?</h1>
+            <h2 class="container-front-text-title">How did we do?</h2>
             <p class="container-front-text-content">
               Please let us know how we did with your support request. All
               feedback is appreciated to help us improve our offering!
@@ -55,14 +55,15 @@
               alt="illustration-thank-you"
             />
           </div>
-          <div id="container-back-result" class="container-back-result">
+          <div id="container-back-content" class="container-back-content">
+              <span id="container-back-content-result" class="container-back-content-result"></span>
           </div>
           <div class="container-back-text">
-            <div class="container-back-text-title">Thank you!</div>
-            <div class="container-back-text-content">
+            <h2 class="container-back-text-title">Thank you!</h2>
+            <p class="container-back-text-content">
               We appreciate you taking the time to give a rating. If you ever
               need more support, don’t hesitate to get in touch!
-            </div>
+            </p>
           </div>
         </div>
       </div>
@@ -77,13 +78,12 @@
         const options = document.getElementById("container-front-options")
         const button = document.getElementById("container-front-button")
         const inner = document.getElementById("container-inner")
-        const result = document.getElementById("container-back-result")
+        const result = document.getElementById("container-back-content-result")
         const alloptions = options.children
         const totaloptions = alloptions.length
         let valor = 0
         for(let i = 0;i<totaloptions;i++){
-            valor = i + 1
-            alloptions[i].textContent = valor
+            alloptions[i].textContent = i + 1
             alloptions[i].addEventListener("click",function(){
                 let previousoption= document.getElementsByClassName("selected")
                 if(previousoption.length !== 0){
@@ -94,8 +94,10 @@
             })
         }
         button.addEventListener("click",function(){
-            inner.classList.add("rotar")
-            result.textContent = `You selected ${valor} out of 5`
+            if(valor !== 0){
+                inner.classList.add("rotar")
+                result.textContent = `You selected ${valor} out of 5`
+            }
         })
     </script>
   </body>
