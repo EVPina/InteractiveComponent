@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+*{
+    font-size: 15px;
+    font-family:  'Overpass', sans-serif;
+}
+
+@media (min-width:600px){
+    body{
+        align-items: center;
+    }
+    
+}
+@media (max-width:440px) {
+    .container{
+        width: 320px !important;
+        margin: 0px 20px;
+    }
+}
+
+
+body{
+    background: hsl(216, 12%, 8%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 98vh;
+}
+
+.container{
+    width: 355px;
+    height: 320px;
+    position: relative;
+}
+.container-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* .container:hover .container-inner {
+    transform: rotateY(180deg);
+} */
+.container-front,
+.container-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: #1A212B;
+    border-radius: 40px;    
+    padding: 2rem;
+}
+
+.container-back{
+    transform: rotateY(180deg);
+}
+
+.container-front-start img,.container-front-options-option{
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 50%;
+}
+
+.container-front-start img{
+    padding: 1rem;
+}
+
+.container-front-text h1
+{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%)
+}
+
+.container-front-text p,
+.container-front-options-option
+{
+    font-weight: 400;
+    color:hsl(216, 12%, 54%);
+}
+
+.container-front-options
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.container-front-options-option
+{
+    padding: 0.9rem 1.3rem;
+    cursor: pointer;
+}
+.container-front-options-option:hover
+{
+    background-color: hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
+    transition: 0.3s;
+}
+.container-front-button
+{
+    cursor: pointer;
+    margin-top: 30px;
+    padding: 12px 0;
+    background: hsl(25, 97%, 53%);
+    border: none;
+    color: hsl(0, 0%, 100%);
+    border-radius: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+.container-front-button:hover
+{
+    background-color:hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+    transition: 0.3s;
+}
