@@ -27,7 +27,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="container-inner">
+      <div id="container-inner" class="container-inner">
         <div class="container-front">
           <div class="container-front-start">
             <img src="images/icon-star.svg" alt="start" />
@@ -39,14 +39,14 @@
               feedback is appreciated to help us improve our offering!
             </p>
           </div>
-          <div class="container-front-options">
-            <div class="container-front-options-option">1</div>
-            <div class="container-front-options-option">2</div>
-            <div class="container-front-options-option">3</div>
-            <div class="container-front-options-option">4</div>
-            <div class="container-front-options-option">5</div>
+          <div class="container-front-options" id="container-front-options">
+            <div class="container-front-options-option" id="container-front-options-option"></div>
+            <div class="container-front-options-option" id="container-front-options-option"></div>
+            <div class="container-front-options-option" id="container-front-options-option"></div>
+            <div class="container-front-options-option" id="container-front-options-option"></div>
+            <div class="container-front-options-option" id="container-front-options-option"></div>
           </div>
-          <button class="container-front-button">Submit</button>
+          <button id="container-front-button" class="container-front-button">Submit</button>
         </div>
         <div class="container-back">
           <div class="container-back-image">
@@ -55,10 +55,7 @@
               alt="illustration-thank-you"
             />
           </div>
-          <div class="container-back-result">
-            You selected
-            <!-- Add rating here -->
-            out of 5
+          <div id="container-back-result" class="container-back-result">
           </div>
           <div class="container-back-text">
             <div class="container-back-text-title">Thank you!</div>
@@ -76,5 +73,30 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Enzo Vargas</a>.
     </div>
+    <script>
+        const options = document.getElementById("container-front-options")
+        const button = document.getElementById("container-front-button")
+        const inner = document.getElementById("container-inner")
+        const result = document.getElementById("container-back-result")
+        const alloptions = options.children
+        const totaloptions = alloptions.length
+        let valor = 0
+        for(let i = 0;i<totaloptions;i++){
+            valor = i + 1
+            alloptions[i].textContent = valor
+            alloptions[i].addEventListener("click",function(){
+                let previousoption= document.getElementsByClassName("selected")
+                if(previousoption.length !== 0){
+                    previousoption[0].classList.remove("selected")
+                }
+                alloptions[i].classList.add("selected")
+                valor = i+1
+            })
+        }
+        button.addEventListener("click",function(){
+            inner.classList.add("rotar")
+            result.textContent = `You selected ${valor} out of 5`
+        })
+    </script>
   </body>
 </html>
