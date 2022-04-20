@@ -3,35 +3,45 @@
 *{
     font-size: 15px;
     font-family:  'Overpass', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-@media (min-width:600px){
-    body{
-        align-items: center;
-    }
-    
-}
 @media (max-width:440px) {
     .container{
-        width: 320px !important;
+        width: 340px !important;
         margin: 0px 20px;
     }
+    
+    .container-front-options-option
+    {
+        padding: 0.6rem !important;
+    }
 }
-
 
 body{
     background: hsl(216, 12%, 8%);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 98vh;
 }
 
-.container{
-    width: 340px;
-    height: 340px;
-    /* position: relative; */
+main{
+    width: 380px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+
+.container{
+    position: relative;
+    height: 92%;
+}
+
 .container-inner{
     position: relative;
     width: 100%;
@@ -50,13 +60,23 @@ body{
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    background-color: #1A212B;
+     background-color: #1A212B;
     border-radius: 40px;    
-    padding: 2rem;
 }
 
 .container-back{
     transform: rotateY(180deg);
+}
+
+
+.container-front-options,
+.container-front-start{
+    padding: 1.5rem;
+}
+
+.container-front-contentbutton,
+.container-front-text{
+    padding: 0 1.5rem;
 }
 
 .container-front-start img,.container-front-options-option{
@@ -83,29 +103,34 @@ body{
     color:hsl(216, 12%, 54%);
     line-height: 1.5;
 }
-
+.container-front-text-content,
+.container-back-text-content
+{
+    margin-top: 12px;
+}
 .container-front-options
 {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 23px;
+    text-align: center;
 }
 
 .container-front-options-option
 {
-    padding: 0.9rem 1.3rem;
     cursor: pointer;
+    padding: 0.8rem;
 }
 .container-front-options-option:hover
 {
-    background-color: hsl(25, 97%, 53%);
+    background-color:hsl(217, 12%, 63%);
     color:hsl(0, 0%, 100%);
     transition: 0.3s;
 }
+
 .container-front-button
 {
     cursor: pointer;
-    margin-top: 30px;
     padding: 12px 0;
     background: hsl(25, 97%, 53%);
     border: none;
@@ -114,17 +139,18 @@ body{
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-weight: 700;
+    font-weight: 400;
 }
 .container-front-button:hover
 {
-    background-color:hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 100%);
     color: hsl(25, 97%, 53%);
     transition: 0.3s;
+    font-weight: 700;
 }
 
 .selected{
-    background-color: hsl(217, 12%, 63%);
+    background-color: hsl(25, 97%, 53%);
     color: hsl(0, 0%, 100%);
 }
 
@@ -133,8 +159,14 @@ body{
     text-align: center;
 }
 
+.container-back-image,
+.container-back-text,
 .container-back-content{
-    margin: 2.5rem 0;
+    padding: 1.3rem;
+}
+.container-back-image img
+{
+    width: 120px;
 }
 
 .container-back-content-result{

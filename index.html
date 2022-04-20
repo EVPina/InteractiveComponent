@@ -19,6 +19,8 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        color: #fff;
+        margin-top: 1rem;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -26,54 +28,58 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div id="container-inner" class="container-inner">
-        <div class="container-front">
-          <div class="container-front-start">
-            <img src="images/icon-star.svg" alt="start" />
+    <main>
+      <div class="container">
+        <div id="container-inner" class="container-inner">
+          <div class="container-front">
+            <div class="container-front-start">
+              <img src="images/icon-star.svg" alt="start" />
+            </div>
+            <div class="container-front-text">
+              <h2 class="container-front-text-title">How did we do?</h2>
+              <p class="container-front-text-content">
+                Please let us know how we did with your support request. All
+                feedback is appreciated to help us improve our offering!
+              </p>
+            </div>
+            <div class="container-front-options" id="container-front-options">
+              <div class="container-front-options-option" id="container-front-options-option"></div>
+              <div class="container-front-options-option" id="container-front-options-option"></div>
+              <div class="container-front-options-option" id="container-front-options-option"></div>
+              <div class="container-front-options-option" id="container-front-options-option"></div>
+              <div class="container-front-options-option" id="container-front-options-option"></div>
+            </div>
+            <div class="container-front-contentbutton">
+              <button id="container-front-button" class="container-front-button">Submit</button>
+            </div>
           </div>
-          <div class="container-front-text">
-            <h2 class="container-front-text-title">How did we do?</h2>
-            <p class="container-front-text-content">
-              Please let us know how we did with your support request. All
-              feedback is appreciated to help us improve our offering!
-            </p>
-          </div>
-          <div class="container-front-options" id="container-front-options">
-            <div class="container-front-options-option" id="container-front-options-option"></div>
-            <div class="container-front-options-option" id="container-front-options-option"></div>
-            <div class="container-front-options-option" id="container-front-options-option"></div>
-            <div class="container-front-options-option" id="container-front-options-option"></div>
-            <div class="container-front-options-option" id="container-front-options-option"></div>
-          </div>
-          <button id="container-front-button" class="container-front-button">Submit</button>
-        </div>
-        <div class="container-back">
-          <div class="container-back-image">
-            <img
-              src="images/illustration-thank-you.svg"
-              alt="illustration-thank-you"
-            />
-          </div>
-          <div id="container-back-content" class="container-back-content">
-              <span id="container-back-content-result" class="container-back-content-result"></span>
-          </div>
-          <div class="container-back-text">
-            <h2 class="container-back-text-title">Thank you!</h2>
-            <p class="container-back-text-content">
-              We appreciate you taking the time to give a rating. If you ever
-              need more support, don’t hesitate to get in touch!
-            </p>
+          <div class="container-back">
+            <div class="container-back-image">
+              <img
+                src="images/illustration-thank-you.svg"
+                alt="illustration-thank-you"
+              />
+            </div>
+            <div id="container-back-content" class="container-back-content">
+                <span id="container-back-content-result" class="container-back-content-result"></span>
+            </div>
+            <div class="container-back-text">
+              <h2 class="container-back-text-title">Thank you!</h2>
+              <p class="container-back-text-content">
+                We appreciate you taking the time to give a rating. If you ever
+                need more support, don’t hesitate to get in touch!
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Enzo Vargas</a>.
-    </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Enzo Vargas</a>.
+      </div>
+    </main>
     <script>
         const options = document.getElementById("container-front-options")
         const button = document.getElementById("container-front-button")
